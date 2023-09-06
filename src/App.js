@@ -6,7 +6,7 @@ export default function App() {
   //0.
  const [count, setCount] = useState(0);
   return (
-    <div>
+    <div style={{padding:10}}>
       {/*add function for count on title*/}
       <h1 onClick={()=>{setCount(count+1)}}>Codemobiles : {count}</h1>
       <Box1/>
