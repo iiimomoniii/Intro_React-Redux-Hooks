@@ -19,8 +19,10 @@ export default function App() {
       <div style={{display:'flex', flexDirection:'row'}}>
         {/*2. update add action in reducer by dispatch*/}
         <button onClick={()=>{dispatch(appAction.add())}}>Add</button>
-        <button onClick={()=>{}}>REM</button>
-        <button onClick={()=>{}}>Clear</button>
+        {/*4. update remove action in reducer by dispatch*/}
+        <button onClick={()=>{dispatch(appAction.remove())}}>REM</button>
+        {/*5. update clear action in reducer by dispatch*/}
+        <button onClick={()=>{dispatch(appAction.clear(0))}}>Clear</button>
       </div>
       {/*access function count in appReducer*/}
       <h1>Codemobiles : {appReducer.count}</h1>

@@ -11,10 +11,10 @@ export const setStateToRem = () => ({
 })
 
 //Action clear value 
-export const setStateToClr = (payload) => ({
+export const setStateToClr = payload => ({
   type: APP_ACTION_CLR,
   payload
-})
+});
 
 export const add = ()=> {
   return dispatch =>{
@@ -28,8 +28,8 @@ export const remove = ()=> {
   }
 }
 
-export const clear = ()=> {
+export const clear = (payload)=> {
   return dispatch =>{
-    dispatch(setStateToClr())
+    dispatch(setStateToClr(payload))
   }
 }
