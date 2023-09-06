@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function App() {
+export default function Box2() {
   return (
     <div>
-      <h1>Codemobile</h1>
+      <h2>Box2</h2>
     </div>
   );
 }
