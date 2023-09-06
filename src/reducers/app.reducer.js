@@ -1,6 +1,6 @@
 //(Reducer State in react cycle)
 const initialState = {
-    count:0
+    count:10
 }
 
 export default (state = initialState, { type, payload }) => {
