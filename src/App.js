@@ -6,11 +6,14 @@ import Box2 from './components/Box2';
 import Box3 from './components/Box3';
 //import action and catch to appAction
 import * as appAction from './actions/app.action';
+
+
 export default function App() {
   
   //0.init appReducer
   //0.1 map appReducer in useSelector
   const appReducer = useSelector(({appReducer:appReducer})=>appReducer)
+  const box1Reducer = useSelector(({box1Reducer:box1Reducer})=>box1Reducer)
   //0.2 call dispatch hook for use action by reducer
   const dispatch = useDispatch();
 
@@ -25,7 +28,7 @@ export default function App() {
         <button onClick={()=>{dispatch(appAction.clear(0))}}>Clear</button>
       </div>
       {/*access function count in appReducer*/}
-      <h1>Codemobiles : {appReducer.count}</h1>
+      <h1>Codemobiles : {appReducer.count}, Box1 {box1Reducer.count1}</h1>
       <Box1/>
       <Box2/>
       <Box3/>
