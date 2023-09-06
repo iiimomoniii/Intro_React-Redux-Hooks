@@ -16,9 +16,22 @@ export const setStateToClr = payload => ({
   payload
 });
 
+//send data when add in synchronous type realtime to return updated value
+// export const add = ()=> {
+//   return dispatch =>{
+//     dispatch(setStateToAdd())
+//   }
+// }
+
+//send data when add in asynchronous type
 export const add = ()=> {
   return dispatch =>{
-    dispatch(setStateToAdd())
+    //set time for delay when feed data from api in 1 sec
+    setTimeout(()=>{
+      //update value when feed data is completed
+      dispatch(setStateToAdd());
+    },1000)
+    
   }
 }
 
